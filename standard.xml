@@ -5,7 +5,7 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: STL
+    Checkstyle-Configuration: standard
     Description: none
 -->
 <module name="Checker">
@@ -72,8 +72,10 @@
     <module name="EmptyStatement"/>
     <module name="EqualsHashCode"/>
     <module name="HiddenField">
+      <property name="severity" value="ignore"/>
       <property name="ignoreConstructorParameter" value="true"/>
       <property name="ignoreSetter" value="true"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
