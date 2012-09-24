@@ -5,14 +5,13 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: github
-    Description: none
+    Checkstyle-Configuration: Copy of Sun Checks
+    Description: 
+Checkstyle configuration that checks the sun coding conventions.
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
-    <property name="cacheFile" value="target/cachefile"/>
-    <property name="tabWidth" value="4"/>
     <module name="JavadocMethod">
       <property name="scope" value="protected"/>
     </module>
@@ -77,8 +76,10 @@
     <module name="LeftCurly"/>
     <module name="NeedBraces"/>
     <module name="RightCurly"/>
-    <module name="AvoidInlineConditionals"/>
-    <module name="DoubleCheckedLocking"/>
+    <module name="AvoidInlineConditionals">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
     <module name="EmptyStatement"/>
     <module name="EqualsHashCode"/>
     <module name="HiddenField">
